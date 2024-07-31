@@ -4,12 +4,54 @@
     font-family: "MedievalSharp", cursive;
     font-weight: 400;
     font-style: normal;
-  }  
+}
+
+:root{
+    --cor-variante: rgb(208, 169, 63);
+    --cor-base: rgb(235, 222, 184);
+    --cor-texto: black;
+    --texto-secundario: white;
+}
+
+.modoEscuro{
+    --cor-variante: #5d4157;
+    --cor-base: #838689;
+    --cor-texto: #ebe3aa;
+    --texto-secundario: #cad7b2;
+}
 
 *{
     margin: 0;
     padding: 0;
     font-family: 'MedievalSharp', Arial, Helvetica, sans-serif;
+}
+
+#controle-tema{
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    border-radius: 50%;
+    border-style: none;
+    background-color: var(--cor-base);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#controle-tema svg{
+    fill: var(--cor-variante);
+}
+
+#controle-tema svg:last-child{
+    display: none;
+}
+
+.modoEscuro #controle-tema svg:first-child{
+    display: none;
+}
+
+.modoEscuro #controle-tema svg:last-child{
+    display: block;
 }
 
 .pergunta{
@@ -33,6 +75,12 @@ img {
     font-size: 3.5rem;
 }
 
+.logo{
+    text-align: center;
+    font-size: 2.5rem;
+    padding: 15px;
+}
+
 .pergunta-resposta {
     margin: 50px;
 }
@@ -40,7 +88,7 @@ img {
 .escolha{
     padding: 15px;
     background-color: rgb(17, 101, 22);
-    color: white;
+    color: var(--texto-secundario);
     font-weight: 700;
     font-size: 1.1rem;
 }
@@ -50,13 +98,14 @@ a {
 }
 
 .cabecalho {
-    background-color: rgb(208, 169, 63);
-    height: 100px;
+    background-color: var(--cor-variante);
+    height: 50px;
     width: 100%;
+    padding: 20px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    color: white;
+    color: var(--texto-secundario);
 }
 
 nav{
@@ -71,16 +120,16 @@ nav a{
     border-top-right-radius: 0;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 25px;
-    color: black;
+    color: var(--cor-texto);
 }
 
 nav a:hover{
-    color: white;
+    color: var(--texto-secundario);
     background-color:  rgba(148, 119, 39, 0.707);
 }
 
 section {
-    background-color: rgb(235, 222, 184);
+    background-color: var(--cor-base);
     padding: 2% 3%;
 }
 
@@ -114,7 +163,7 @@ aside img {
 }
 
 .personagem{
-    color: black;
+    color: var(--cor-texto);
     font-size: 1.5rem;
     padding: 5px;
     border-radius: 5px;
@@ -128,5 +177,5 @@ aside img {
 footer{
     padding: 15px;
     text-align: center;
-    background-color: rgb(208, 169, 63);
+    background-color: var(--cor-variante);
 }
